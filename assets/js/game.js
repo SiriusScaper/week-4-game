@@ -16,10 +16,18 @@ function randomNumRange(min, max) {
 }
 
 //Update array with four random numbers to use on the "buttons"
-if (btnNum.length !== 4){
-    btnNum.push(minNum);
-    console.log(btnNum);
+for(i = btnNum.length; i < 4; i++ ){
+    minNum = randomNumRange(1, 12)
+    btnNum.push(minNum)
 }
+//I am probably missing a much simpler way to do this.
+
+
+// if (btnNum.length !== 4){
+//     btnNum.push(minNum);
+//     console.log(btnNum);
+// }
+
 console.log(btnNum);
 
 //Function to add main random number to dom
