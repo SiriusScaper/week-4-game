@@ -1,5 +1,3 @@
-console.log('Hello World')
-
 //Global variables
 
 let minNum = randomNumRange(1, 12);
@@ -33,7 +31,11 @@ console.log(btnNum);
 //Function to add main random number to dom
 $('#whatever').html(maxNum);
 
+//Need a function to add score number to dom
+
 //Add click functionality to "buttons"
+    //should add a random number from array
+    //should add to the score counter by the amount of the number added
 $('#red, #blue, #green, #violet').on('click', function(){
     // $('.randNum').html(minNum);
     $('#red').html(minNum);
@@ -42,6 +44,17 @@ $('#red, #blue, #green, #violet').on('click', function(){
     $('#violet').html(minNum);
 })
 
+//Need a function to compare maxNum to current score value
+    //If score is less than maxNum then continue
+    //else if score is equal to maxNum
+        //Update win +1
+        //Reset minNum/maxNum values
+    //else update loss +1
+        //reset minNum/maxNum values
+
+//Need a reset function to set everything back to default
+    //Gen new random numbers
+    //Reset win/loss
 
 console.log("poop " + minNum + ' ' + maxNum);
 
