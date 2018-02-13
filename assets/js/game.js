@@ -2,12 +2,12 @@ console.log('Hello World')
 
 //Global variables
 
-let buttonNumbers = []
 let minNum = randomNumRange(1, 12);
 let maxNum = randomNumRange(19, 120);
 let wins = 0
 let losses = 0
 let score = 0
+let btnNum = []
 
 
 //Generate a random number using arguements to get specific ranges for the elements of the game
@@ -15,10 +15,12 @@ function randomNumRange(min, max) {
     return Math.floor(Math.random()*(max - min + 1)) + min;
 }
 
-if (buttonNumbers !== 4){
-    buttonNumbers.push(minNum);
+//Update array with four random numbers to use on the "buttons"
+if (btnNum.length !== 4){
+    btnNum.push(minNum);
+    console.log(btnNum);
 }
-console.log(buttonNumbers);
+console.log(btnNum);
 
 //Function to add main random number to dom
 $('#whatever').html(maxNum);
