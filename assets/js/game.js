@@ -8,6 +8,3 @@ console.log('Hello World')
 function randomNum() {
     
 }
-
-
-fs
