@@ -15,9 +15,12 @@ function randomNumRange(min, max) {
 }
 
 //Function to add main random number to dom
-function addToHTML(){
-    $('#whatever').html(maxNum.attr('value'));
-}
+$('#whatever').html(maxNum);
+
+//Add click functionality to "buttons"
+$('#red', '#blue', '#green', '#violet').click(function(){
+    $('#red').html(minNum);
+})
 
 
 console.log("poop " + minNum + ' ' + maxNum);

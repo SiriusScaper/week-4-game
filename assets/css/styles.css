@@ -1,23 +1,21 @@
-#red {
-    background-color: red;
+.randNum {
+    color: black;
     width: 100px;
     height: 100px;
+}
+
+#red {
+    background-color: red;
 }
 
 #blue {
     background-color: blue;
-    width: 100px;
-    height: 100px;
 }
 
 #green {
     background-color: green;
-    width: 100px;
-    height: 100px;
 }
 
 #violet {
     background-color: violet;
-    width: 100px;
-    height: 100px;
 }
