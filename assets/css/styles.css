@@ -1,6 +1,7 @@
 body {
-    background-color: slategray;
+    background: linear-gradient(-45deg, rgb(57, 50, 48), rgb(52, 106, 94));
 }
+
 
 .randNum {
     color: black;
