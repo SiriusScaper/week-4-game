@@ -15,6 +15,7 @@ const btnNum = [];
 const reset = () => {
   maxNum = randomNumRange(19, 120);
   minNum = randomNumRange(1, 12);
+  score = 0;
 };
 
 // Update array with four random numbers to use on the "buttons"
@@ -24,72 +25,75 @@ const numArrUpdate = () => {
     btnNum.push(minNum);
   }
 };
-
 numArrUpdate();
 
 // Need a function to compare maxNum to current score value
 const compare = () => {
-  if (score > maxNum) {
+  if (maxNum < score) {
     losses += 1;
     reset();
+    console.log(losses)
   } else if (score === maxNum) {
     wins += 1;
     reset();
+    console.log(wins)
   }
 };
 
-// if (btnNum.length !== 4){
-//     btnNum.push(minNum);
-//     console.log(btnNum);
-// }
 
 console.log(btnNum);
 
 // Function to add main random number to dom
 $('#bigrandom').html(maxNum);
 
-// Need a function to add score number to dom
-$('#score').html(score);
 
 // Add click functionality to "buttons"
 // should add a random number from array
 // should add to the score counter by the amount of the number added
 
-// $('#red, #blue, #green, #violet').on('click', function(){
-//     $('#red').html(btnNum[0]);
-//     $('#blue').html(btnNum[1]);
-//     $('#green').html(btnNum[2]);
-//     $('#violet').html(btnNum[3]);
-// });
-
 $('#red').on('click', () => {
   score += btnNum[0];
-  console.log(score);
   compare();
+  console.log(score);
 });
 
 $('#blue').on('click', () => {
   score += btnNum[1];
-  console.log(score);
   compare();
+  console.log(score);
 });
 
 $('#green').on('click', () => {
   score += btnNum[2];
-  console.log(score);
   compare();
+  console.log(score);
 });
 
 $('#violet').on('click', () => {
   score += btnNum[3];
-  console.log(score);
   compare();
+  console.log(score);
 });
 
+// Need a function to add score number to dom
+$('#red, #blue, #green, #violet').click(() => {
+  $('#score').html(score);
+  $('#wins').html(wins);
+  $('#losses').html(losses)
+});
 
-console.log(green);
-
-
+// const check = (compare) => {
+//   if (score < maxNum) {
+//     console.log(score)
+//   } else if (score === maxNum) {
+//     wins += 1;
+//     reset();
+//   } else {
+//     losses += 1;
+//     reset();
+//   }
+// }
+// check();
 // If score is less than maxNum then continue
 // else if score is equal to maxNum
 // Update win +1
@@ -98,12 +102,4 @@ console.log(green);
 // Need a reset function to set everything back to default
 // Gen new random numbers
 
-console.log(`poop ${minNum} ${maxNum}`);
-
-// function genRanNumButtons() {
-//     while (buttonNumbers.length < 4){
-//         buttonNumbers.push(storeNum);
-//     }
-// }
-
-// console.log(buttonNumbers)
+console.log(`poop ${minNum} ${maxNum} ${wins} ${losses}`);
